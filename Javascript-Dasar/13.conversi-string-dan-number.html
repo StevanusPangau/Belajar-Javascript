@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversi String ke Number</title>
+  </head>
+  <body>
+    <script>
+      const value1 = parseInt('1'); // conversi dari string to number
+      const value2 = 1;
+
+      //   jika string ditambah number, maka akan menjadi string
+      const sum = value1 + value2;
+
+      document.writeln(`<p>${sum}</p>`);
+
+      document.writeln(`<p>${parseInt('1.1')}</p>`); // Parse int tidak akan mengeksekusi bilangan decimal tapi bukan berarti dibulatkan
+      document.writeln(`<p>${parseFloat('1.1')}</p>`);
+      document.writeln(`<p>${Number('1.1')}</p>`);
+
+      //   contoh konversi dari number ke string
+      const a = 1;
+      const b = 1;
+      const total = a.toString() + b.toString();
+      document.writeln('Conversi number to string');
+      document.writeln(`<p>${total}</p>`);
+
+      //   Jika menggunakan parseInt atau parseFloat program masih akan mentolerin jika ada kesalahan sedikit
+      //   NaN (Not a Number)
+      document.writeln('NaN (Not a Number)');
+      document.writeln(`<p>${parseInt('salah')}</p>`); // hasilnya NaN
+      document.writeln(`<p>${parseInt('1salah')}</p>`); // hasilnya 1
+      document.writeln(`<p>${parseInt('1.1salah')}</p>`); // hasilnya 1.1
+
+      //   Jika menggunakan Number, program tidak akan mentolerin jika ada kesalah sedikitpun
+      document.writeln(`<p>${Number('1salah')}</p>`); // hasilnya NaN
+      document.writeln(`<p>${Number('1.1salah')}</p>`); // hasilnya NaN
+
+      //   Jika NaN dioperasikan dengan data apapun hasilnya tetap akan jadi NaN
+      const first = Number('salah'); // NaN
+      const totalNumber = first + 100;
+      document.writeln(`<p>${totalNumber}</p>`);
+
+      //   gunakan function isNaN() untuk melihat jika data NaN atau tidak
+      document.writeln(`<p>${isNaN(first)}</p>`);
+    </script>
+  </body>
+</html>
