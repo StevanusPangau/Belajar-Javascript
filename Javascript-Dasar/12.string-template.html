@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const firstName = 'Stevanus';
+      const middleName = 'Evan';
+      const lastName = 'Pangau';
+
+      //   Pakai String template lebih rapi
+      const template = `Name : ${firstName} ${middleName} ${lastName}`;
+
+      //   penulisan biasa
+      const lama = 'Name : ' + firstName + ' ' + middleName + ' ' + lastName;
+
+      console.info(template);
+      console.info(lama);
+
+      //   Expression di string template
+      const name = 'Stevanus Evan Pangau';
+      const nilai = 75;
+      const template2 = `Name : ${name} Nilai : ${nilai > 70}`;
+
+      console.info(template2);
+
+      //   Multiline string
+      let multiLineString = `
+        Nama Saya Evan
+        Saya adalah mahasiswa
+        di fti
+        uksw
+    `; // tapi di multiline spasinya akan terbaca
+
+      document.writeln('<pre>');
+      document.writeln(multiLineString);
+      document.writeln('</pre>');
+    </script>
+  </body>
+</html>
