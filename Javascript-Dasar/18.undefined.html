@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undefined</title>
+  </head>
+  <body>
+    <script>
+      // Undefined jika kita membuat variable dan belum di masukan value
+      let name;
+      if (name === undefined) {
+        // alert('UNDEFINED');
+        console.info('UNDEFINED');
+      } else {
+        // alert('DEFINED');
+        console.info('DEFINED');
+      }
+
+      const names = ['Evan', 'Pangau'];
+      //   delete names[0];
+
+      if (names[2] == undefined) {
+        console.info('ARRAY UNDEFINED');
+      } else {
+        console.info('ARRAY DEFINED');
+      }
+
+      let person = {
+        // name: 'Evan',
+      };
+
+      if (person.name == undefined) {
+        console.info('OBJECT UNDEFINED');
+      } else {
+        console.info('OBJECT DEFINED');
+      }
+    </script>
+  </body>
+</html>
