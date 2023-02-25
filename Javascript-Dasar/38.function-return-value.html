@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Secara default, function itu tidak menghasilkan value apapun, namun jika kita ingin, kita bisa membuat sebuah function mengembalikan value
+        Agar function bisa menghasilkan value, kita bisa menggunakan kata kunci return di dalam function nya.
+        Dan di dalam block function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata kunci return, lalu diikuti dengan data yang ingin kita hasilkan.
+        Function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data sekaligus, kita bisa menggunakan Array sebagai return value nya
+        */
+
+      // membuat function dengan parameter dan return
+      function sayHello(firstName, lastName) {
+        const say = `<p>Hello ${firstName} ${lastName}</p>`;
+        return say;
+      }
+
+      //   memangil function dengan menangkap return value
+      const result = sayHello('Evan', 'Pangau');
+      document.writeln(`<p>${result}</p>`);
+
+      function getFinalValue(value) {
+        if (value > 90) {
+          return 'A';
+        } else if (value > 80) {
+          return 'B';
+        } else if (value > 70) {
+          return 'C';
+        } else if (value > 60) {
+          return 'D';
+        } else {
+          return 'E';
+        }
+      }
+
+      const finalValue = getFinalValue(76);
+      document.writeln(`<p>${finalValue}</p>`);
+
+      function isContains(array, searchValue) {
+        for (const element of array) {
+          console.info('Iterasi Element ' + element);
+          if (element === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+      const array = [1, 23, 34, 54, 23, 54, 3, 5, 4, 6];
+      const search = 34;
+      const found = isContains(array, search);
+      document.writeln(`<p>${found}</p>`);
+    </script>
+  </body>
+</html>
