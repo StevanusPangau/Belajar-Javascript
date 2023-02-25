@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika Di Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      /*
+      OPERATOR LOGIKA DI NON BOOLEAN
+      Sebelumnya kita sudah tahu bahwa operator logika AND (&&) dan OR (||)  digunakan untuk dua data boolean
+      Namun berbeda di JavaScript, kita bisa menggunakan operator logika AND dan OR untuk tipe data non boolean
+
+      OPERATOR (||) DI NON BOOLEAN
+      Operator logika OR (||), membaca dari kiri ke kanan. 
+      Operator ini akan mengambil nilai pertama yang truthy. 
+      Jika tidak ada satupun yang bernilai truthy, maka yang terakhir yang akan diambil
+
+      */
+
+      console.info('Hello' || ''); // Hello
+      console.info('' || []); // []
+      console.info('0' || 'NOL'); // falsy
+      console.info(0 || 'NOL'); // truthy
+      console.info(null || 'NULL');
+      console.info(undefined || 'UNDEFINED');
+      console.info(0 || false);
+
+      // contoh dipakai saat
+      const person = {
+        firstName: 'Evan',
+        lastName: 'Pangau',
+      };
+
+      const name = person.firstName || person.lastName;
+      // document.writeln(name);
+
+      console.info(name);
+
+      // &&
+      console.info('Hello' && '');
+      console.info('' && []);
+      console.info('0' && 'NOL');
+      console.info(0 && 'NOL');
+      console.info(null && 'NULL');
+      console.info(undefined && 'UNDEFINED');
+      console.info(0 && false);
+    </script>
+  </body>
+</html>
