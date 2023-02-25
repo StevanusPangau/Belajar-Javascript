@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For In</title>
+    <title>For Of</title>
   </head>
   <body>
     <script>
@@ -13,22 +13,18 @@
         For of tidak bisa digunakan untuk melakukan iterasi data di object, karena object bukanlah iterable.
         */
 
-      const person = {
-        firstName: 'Evan',
-        middleName: 'Stevanus',
-        lastName: 'Pangau',
-      };
-
-      //   ambil data dalam property
-      for (const property in person) {
-        document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
-      }
-
-      //   ambil data dalam array
+      // for of pada array
       const names = ['Evan', 'Stevanus', 'Pangau'];
 
-      for (const index in names) {
-        document.writeln(`<p>${index} : ${names[index]}</p>`);
+      for (const name of names) {
+        document.writeln(`<p>${name}</p>`);
+      }
+
+      //   for of pada string
+      const fullName = 'Stevanus Evan Pangau';
+
+      for (const character of fullName) {
+        document.writeln(`<p>${character}</p>`);
       }
     </script>
   </body>
