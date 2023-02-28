@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict Mode</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Saat kita menjalankan kode program JavaScript, secara default kode program kita berjalan dalam mode tidak strict, atau istilahnya sloppy mode
+        Pada ECMAScript 5, diperkenalkan mode strict, dimana ketika strict mode dijalankan, maka akan merubah beberapa cara kerja di JavaScript, seperti :
+        Merubah beberapa JavaScript error dari yang tadinya silent error, menjadi throw error (terlihat)
+        Memperbaiki beberapa kesalahan engine JavaScript untuk optimisasi
+        Menolak beberapa kode perintah yang kedepannya akan digunakan di ECMAScript
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode 
+        */
+
+      // jika ingin menggunakan strict tuliskan perintah berikut di awal code file javascript
+      //   'use strict';
+
+      function useStrictMode() {
+        'use strict';
+
+        const person = {
+          firstName: 'Evan',
+        };
+
+        // error
+        // with (person) {
+        //   console.info(firstName);
+        // }
+      }
+
+      useStrictMode();
+    </script>
+  </body>
+</html>
