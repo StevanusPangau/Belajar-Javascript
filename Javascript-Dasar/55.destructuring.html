@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      /*
+              Destructuring adalah fitur yang bisa digunakan untuk membongkar value-value di array atau object ke dalam variable-variable
+              Fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tanpa harus melakukan pengambilan data satu persatu
+              */
+
+      // ARRAY
+      {
+        const names = ['Evan', 'Stevanus', 'Pangau', 'Budi', 'Joko'];
+
+        //   contoh mengambil data array biasa
+        //   const firstName = names[0];
+        //   const middleName = names[1];
+        //   const lastName = names[2];
+
+        //   contoh dengan destructuring array
+        let [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+      }
+
+      //   OBJECT
+      {
+        const person = {
+          firstName: 'Evan',
+          lastName: 'Pangau',
+          address: {
+            street: 'Jalan Belum Ada',
+            city: 'Salatiga',
+            country: 'Indonesia',
+          },
+          hobby: 'Game',
+          channel: 'Channel',
+        };
+
+        //   contoh ambil data satu
+        //   const firstName = person.firstName;
+
+        // contoh dengan destruction
+        // pada address yaitu nested destructuring tapi var address sudah tidak bisa di akses
+        let {
+          firstName,
+          lastName,
+          address: { city, street, country },
+          ...others
+        } = person;
+
+        console.info(firstName);
+        console.info(lastName);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+      }
+
+      //   FUNCTION
+      {
+        // Destructuring pada param function
+
+        // contoh biasa
+        // function displayPerson(person) {
+        //   console.info(person.firstName);
+        //   console.info(person.middleName);
+        //   console.info(person.lastName);
+        // }
+
+        // dengan destrcuturing
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: 'Evan',
+          middleName: 'Stevanus',
+          lastName: 'Pangau',
+        };
+
+        displayPerson(person);
+
+        // function sum
+        function sum([first, second]) {
+          return first + second;
+        }
+
+        console.info(sum([1, 1]));
+        console.info(sum([10, 10]));
+      }
+
+      //   DEFAULT VALUE ARRAY
+      {
+        const names = ['Evan', 'Tivani'];
+        const [firstName, middleName = 'Stevanus', lastName = 'Pangau'] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      //   DEFAULT VALUE OBJECT
+      {
+        const person = {
+          firstName: 'Evan',
+          middleName: 'Budi',
+          lastName: 'Pangau',
+        };
+
+        let { firstName, middleName = 'Stevanus', lastName } = person;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      //   MENGGUNAKAN NAMA VARIABLE LAIN
+      {
+        const person = {
+          firstName: 'Evan',
+          middleName: 'Budi',
+          lastName: 'Pangau',
+        };
+
+        // contohnya berikut
+        let { firstName: namaDepan, middleName: namaTengah = 'Stevanus', lastName: namaBelakang } = person;
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
+    </script>
+  </body>
+</html>
