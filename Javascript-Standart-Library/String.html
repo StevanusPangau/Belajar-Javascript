@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      /*
+        String sendiri memiliki banyak sekali instance method dan properties
+        Hal ini menjadikan untuk memanipulasi data String sangat mudah di JavaScript, seperti mengubah menjadi lowercase, UPPERCASE, memotong string menjadi array dan lain-lain
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods 
+        */
+
+      const name = 'Stevanus Evan Pangau';
+      console.info(name.toLowerCase());
+      console.info(name.toUpperCase());
+      console.info(name.split(' '));
+
+      const input = '     Input Spasi     ';
+      // Trim untuk menghapus spasi kiri dan kanan, atau bisa juga dengan trimLeft/trimStart untuk meghapus spasi di kiri saja
+      console.info(input);
+      console.info(input.trim());
+    </script>
+  </body>
+</html>
