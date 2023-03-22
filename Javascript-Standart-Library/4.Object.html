@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Secara default, object bisa diubah atau dihapus properties nya
+        Jika kita ingin mengubah sebuah object menjadi object yang tidak bisa diubah atau dihapus, kita bisa menggunakan beberapa static method
+        Object.freeze() digunakan untuk mengubah object menjadi object yang tidak bisa diubah atau dihapus attribute nya
+        Object.seal() digunakan untuk mengubah object menjadi object yang tidak bisa dihapus attribute nya
+        */
+
+      const person = {
+        firstName: 'Evan',
+        lastName: 'Pangau',
+      };
+
+      Object.freeze(person);
+
+      person.firstName = 'Diubah'; // tidak berubah
+      delete person.firstName; // tidak terhapus
+
+      console.info(person);
+    </script>
+  </body>
+</html>
