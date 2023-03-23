@@ -8,6 +8,8 @@
   </head>
   <body>
     <script>
+      // OBJECT FREEZE DAN SEAL
+
       /*
         Secara default, object bisa diubah atau dihapus properties nya
         Jika kita ingin mengubah sebuah object menjadi object yang tidak bisa diubah atau dihapus, kita bisa menggunakan beberapa static method
@@ -15,17 +17,65 @@
         Object.seal() digunakan untuk mengubah object menjadi object yang tidak bisa dihapus attribute nya
         */
 
-      const person = {
-        firstName: 'Evan',
-        lastName: 'Pangau',
-      };
+      {
+        console.info('===== Object Freeze and Seal =====');
 
-      Object.freeze(person);
+        const person = {
+          firstName: 'Evan',
+          lastName: 'Pangau',
+        };
 
-      person.firstName = 'Diubah'; // tidak berubah
-      delete person.firstName; // tidak terhapus
+        // Object.freeze(person);
+        Object.seal(person); // tidak bisa dihapus tapi bisa diubah
 
-      console.info(person);
+        person.firstName = 'Diubah'; // tidak berubah
+        person.middlename = 'Stevanus'; // tidak bisa ditambah baik itu freeze maupun seal
+        delete person.firstName; // tidak terhapus
+
+        console.info(person);
+      }
+
+      /*
+      OBJECT ASSIGN
+
+      Kadang kita ada kasus menggabungkan semua attribute dari sebuah object ke object lain
+      Hal ini bisa kita lakukan dengan menggunakan Object.assign(target, source)
+      */
+      {
+        console.info('===== Object Assign =====');
+        const target = {
+          firsName: 'Evan',
+        };
+
+        const source = {
+          firsName: 'Budi', // jika ada var yang sama maka akan di timpa
+          lastName: 'Pangau',
+        };
+
+        Object.assign(target, source);
+        console.info(target);
+        console.info(source);
+      }
+
+      /*
+      OBJECT PROPERTY NAME DAN VALUE
+
+      Object juga memiliki static method untuk digunakan mengambil semua properties names dan values
+      Object.values() digunakan untuk mengambil semua property value
+      Object.getPropertyNames() digunakan untuk mengambil semua properti name
+      */
+
+      {
+        console.info('===== Object Property & Name =====');
+
+        const person = {
+          firstName: 'Evan',
+          lastName: 'Pangau',
+        };
+
+        console.info(Object.values(person));
+        console.info(Object.getOwnPropertyNames(person));
+      }
     </script>
   </body>
 </html>
