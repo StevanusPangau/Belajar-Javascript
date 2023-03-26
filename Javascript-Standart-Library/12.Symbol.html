@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbol</title>
+  </head>
+  <body>
+    <script>
+      {
+        /*
+        Symbol merupakan tipe data yang digaransi akan selalu unique setiap kali kita membuat data symbol
+        Symbol kadang banyak digunakan untuk membuat key pada object
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol 
+        */
+
+        const firstName = Symbol('firstName');
+        const lastName = Symbol();
+
+        const person = {};
+        // ngk lagi pakai ['firstName'] tapi lansung ambil symbolnya
+        person[firstName] = 'Evan';
+        person[lastName] = 'Pangau';
+
+        console.info(person);
+        console.info(person[firstName]);
+        console.info(person[lastName]);
+      }
+
+      {
+        /*
+        Kadang agak sulit membuat symbol harus selalu menggunakan variable
+        Pembuatan symbol juga bisa menggunakan static method Symbol.for(key)
+        Jika kita menggunakan key yang sama, Symbol yang sama akan sekalu dikembalikan
+      */
+
+        console.info(Symbol.for('firstName') === Symbol.for('firstName'));
+
+        const person = {};
+        // ngk lagi pakai ['firstName'] tapi lansung ambil symbolnya
+        person[Symbol.for('firstName')] = 'Evan';
+        person[Symbol.for('lastName')] = 'Pangau';
+
+        console.info(person);
+        console.info(person[Symbol.for('firstName')]);
+        console.info(person[Symbol.for('lastName')]);
+      }
+    </script>
+  </body>
+</html>
