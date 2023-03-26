@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression</title>
+  </head>
+  <body>
+    <script>
+      {
+        /*
+        RegExp merupakan implementasi dari regular expression di JavaScript
+        Regular expression merupakan fitur untuk mencari text dengan pola
+        Membuat regular expression di JavaScript bisa dilakukan dengan dua cara, yaitu menggunakan literal notation atau membuat object RegExp
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp 
+        */
+
+        // 3 cara Membuat Regular Expression
+        // pola pencarian text contoh = evan
+        const regex1 = /[evan]/;
+        const regex2 = new RegExp('[evan]');
+        const regex3 = new RegExp(/[evan]/);
+      }
+
+      {
+        /*
+        REGEXP INSTANCE METHOD
+        exec(value) : result    = Eksekusi regex, jika menemukan data sesuai pola, maka kembalikan result nya, jika tidak maka null
+        test(value) : boolean   = Eksekusi regex, jika menemukan data sesuai pola, maka return true, jika tidak maka false
+        */
+
+        const name = 'Stevanus Evan Pangau';
+        const regex = /evan/;
+
+        // Result
+        let result = regex.exec(name);
+        console.info(result);
+        console.info(regex.exec('Tidak ada'));
+
+        // Boolean
+        let test = regex.test(name);
+        console.info(test);
+        console.info(regex.test('Tidak ada'));
+      }
+
+      {
+        /*
+        REGEX MODIFIER
+        i   = Regex menjadi incase sensitive
+        g   = Pencarian dilakukan secara global, secara default setelah menemukan data, pencarian akan berhenti
+        m   = Multiline, pencarian dilakukan di tiap baris (enter)
+        */
+
+        const name = 'stevanus evan\nEvan pangau\nStevanus Pangau';
+        const regex1 = /stevanus/g;
+        // const regex1 = new RegExp(/evan/, 'i');
+
+        const regex2 = /pangau/gi;
+
+        let result;
+        while ((result = regex1.exec(name)) !== null) {
+          console.info(result);
+        }
+
+        while ((result = regex2.exec(name)) !== null) {
+          console.info(result);
+        }
+      }
+
+      {
+        console.info('\n===== Fitur Regexp Lainnya =====');
+        /*
+        FITUR REGEXP LAINNYA
+        Assersions : indikasi awal dan akhir teks https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions 
+        Character Classes : membedakan antara huruf dan angka https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes 
+        Group dan Range : melakukan grouping atau range huruf atau angka https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges 
+        Quantifiers : menentukan jumlah huruf atau angka https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers 
+        */
+
+        const name = 'stevanus evan\nEpan pangau\nStevanus Pangau';
+        const name2 = 'evan evin evon even evun';
+        // tambahkan ^ untuk mencari data dibaris awal saja
+        // titik untuk mencari karakter apapaun
+        const regex1 = /^ev[aiueo]n/gi;
+
+        let result;
+        while ((result = regex1.exec(name2)) !== null) {
+          console.info(result);
+        }
+      }
+
+      {
+        console.info('\n===== Regular Expression Di String =====');
+
+        /*
+        REGULAR EXPRESSION DI STRING
+
+        match(regex) : Array    = Mencari semua data yang sesuai dengan regex
+        search(regex) : index   = Mencari index data yang sesuai dengan regex
+        replace(regex, value)   = Mengubah data dengan value yang sesuai regex
+        replaceAll(regex, value)= Mengubah semua data dengan value yang sesuai regex
+        split(regex) : Array    = Memotong string dengan regex
+        */
+
+        const name = 'eke eva evi evo eve evu';
+
+        console.info(name.match(/ev[aiueo]/gi));
+        console.info(name.search(/ev[aiueo]/gi));
+
+        // di replace semua karena regex
+        console.info(name.replace(/ev[aiueo]/i, 'kamu'));
+        console.info(name.replace(/ev[aiueo]/gi, 'kamu'));
+        console.info(name.split(/e/gi));
+      }
+    </script>
+  </body>
+</html>
