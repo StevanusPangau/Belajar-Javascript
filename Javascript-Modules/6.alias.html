@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alias Module</title>
+    <script type="module" src="scripts/6.alias.mjs"></script>
+  </head>
+  <body>
+    <script type="module">
+      // contoh alias pada saat di import, ini yang di rekomendasikan
+      import { company, sum, Company } from './scripts/6.alias.mjs';
+
+      // nama varnya sama tapi kita aliaskan agar tidak tabrakan
+      import { company as perusahaan, sum as total, Company as Perusahaan } from './scripts/6.alias2.mjs';
+
+      console.info(company);
+      console.info(sum(5, 5));
+      const a = new Company();
+
+      console.info(perusahaan);
+      console.info(total(10, 5));
+      const b = new Perusahaan();
+    </script>
+  </body>
+</html>
