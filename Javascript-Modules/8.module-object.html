@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Module</title>
+    <script type="module" src="scripts/8.module-object.mjs"></script>
+  </head>
+  <body>
+    <script type="module">
+      // biasa kita import seperti ini
+      // import { firstName, middleName, lastName, hello, Person } from './scripts/8.module-object.mjs';
+
+      // tapi daripada menulis satu" lebih baik kita masukan kedalam object
+      import * as evan from './scripts/8.module-object.mjs';
+
+      console.info(evan);
+
+      console.info(evan.firstName);
+      console.info(evan.middleName);
+      console.info(evan.lastName);
+
+      evan.hello();
+
+      const person = new evan.Person();
+    </script>
+  </body>
+</html>
