@@ -8,7 +8,9 @@
     <script type="module" src="scripts/2.with-modul.mjs"></script>
   </head>
   <body>
-    <script>
+    <script type="module">
+      import { sayHello, sayGoodBye, name } from './scripts/2.with-modul.mjs';
+
       sayHello('Evan');
       sayGoodBye('Evan');
 
