@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Module</title>
+    <script type="module" src="scripts/4.class.mjs"></script>
+  </head>
+  <body>
+    <script type="module">
+      import { Person } from './scripts/4.class.mjs';
+
+      const person = new Person('Evan');
+      person.sayHello('Tivani');
+    </script>
+  </body>
+</html>
