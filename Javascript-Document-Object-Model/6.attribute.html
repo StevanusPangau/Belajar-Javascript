@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute</title>
+  </head>
+  <body>
+    <img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="PZN Logo" />
+    <script>
+      /*
+        # ATTRIBUT
+        - Attr atau attribute merupakan representasi dari attribute sebuah element, atau singkatnya key-value, key nya adalah nama attribute, dan value nya adalah value attribute
+        - https://developer.mozilla.org/en-US/docs/Web/API/Attr 
+        */
+
+      const logo = document.getElementById('logo');
+
+      // contoh mengambil attibute
+      const src = logo.getAttributeNode('src');
+      const alt = logo.getAttributeNode('alt');
+
+      console.info(logo);
+      console.info(src);
+      console.info(src.name);
+      console.info(src.value);
+      console.info(alt);
+
+      /*
+      # ATTR VALUE
+      - Kadang kebanyakan programmer ingin langsung mendapatkan value Attr 
+      - Jarang sekali menggunakan object Attr nya
+      - Untuk mendapatkan value secara langsung, kita bisa menggunakan method getAttribute(name) di Element
+      */
+
+      // saat langsung mengambil attribut maka yang keambil langsung valuenya, jadi berbeda dengan getAttributeNode
+      const src2 = logo.getAttribute('src');
+      console.info(src2);
+    </script>
+  </body>
+</html>
