@@ -8,3 +8,10 @@
 - DOM sendiri sebenarnya bukanlah bagian dari bahasa pemrograman JavaScript, melainkan bagian dari Web API
 - DOM sendiri di desain secara agnostik, artinya sebenarnya bisa digunakan menggunakan bahasa pemrograman apapun, karena memang untuk membuat Web, kita tidak hanya bisa menggunakan bahasa pemrograman JavaScript
 
+# TIPE DATA
+- Document        Merupakan representasi dari halaman web
+- Node            Merupakan base class untuk semua tipe data di DOM, seperti Document, Element, dan Attr
+- Element         Merupakan representasi object element di halaman web, misal head, body, form, input, dan lain-lain
+- NodeList        Merupakan array/collection yang berisikan Node
+- Attr            Atau attribute, merupakan representasi object attribute dalam element
+- NamedNodeMap    Merupakan collection yang berisikan Attr dalam bentuk Map
