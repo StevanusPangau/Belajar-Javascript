@@ -21,3 +21,19 @@
 - Dalam satu halaman web, terdapat satu document, dan kita tidak perlu membuatnya secara manual, karena otomatis akan ada di browser
 - Untuk mengakses Document, kita bisa gunakan object document
 - https://developer.mozilla.org/en-US/docs/Web/API/Document 
+
+# NODE
+- Node adalah base class dari Document, Element dan Attr
+- Artinya semua fitur yang dimiliki di Node dimiliki diturunannya
+- Node dalam DOM itu bentuknya adalah Tree (pohon), artinya dengan Node, kita bisa melihat Parent (node diatas nya), Children (node dibawahnya), Sibling (node disebelahnya)
+- https://developer.mozilla.org/en-US/docs/Web/API/Node 
+
+# NODE PROPERTY
+- Node memiliki banyak sekali property
+- Property di Node banyak berisi informasi reference ke Node lain nya, seperti ke node parent nya, node children nya atau node sebelahnya
+- https://developer.mozilla.org/en-US/docs/Web/API/Node#properties 
+
+# NODE METHOD
+- Node memiliki banyak sekali method
+- Method di Node bisa digunakan untuk memanipulasi data Node di dalam Node tersebut, misal menambah/menghapus Node children
+- https://developer.mozilla.org/en-US/docs/Web/API/Node#properties 

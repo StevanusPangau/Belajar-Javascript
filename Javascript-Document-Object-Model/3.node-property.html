@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node Property</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+
+    <!-- 
+      # NODE PROPERTY
+      - Node memiliki banyak sekali property
+      - Property di Node banyak berisi informasi reference ke Node lain nya, seperti ke node parent nya, node children nya atau node sebelahnya
+      - https://developer.mozilla.org/en-US/docs/Web/API/Node#properties 
+     -->
+
+    <script>
+      const menu = document.getElementById('menu');
+      console.info(menu);
+      console.info(menu.childrens);
+      console.info(menu.childNodes);
+
+      const second = document.getElementById('second');
+      console.info(second);
+      console.info(second.textContent);
+      // jika linya pakai enter maka ambil dua kali untuk siblingnya
+      console.info(second.previousSibling.previousSibling);
+      console.info(second.nextSibling.nextSibling);
+    </script>
+  </body>
+</html>
