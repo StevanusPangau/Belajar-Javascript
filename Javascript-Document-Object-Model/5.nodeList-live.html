@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeList Live</title>
+  </head>
+  <body>
+    <ul id="menu1">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+    <script>
+      /*
+        # LIVE VS STATIC NODELIST
+        - NodeList memiliki 2 tipe, yaitu Live dan Static
+        - Live artinya perubahan yang terjadi pada NodeList nya, akan merubah semua NodeList yang sama
+        - Static artinya perubahan yang terjadi pada NodeList nya, tidak akan merubah semua NodeList yang sama
+        - Saat kita menggunakan element.childNodes, NodeList tersebut bersifat Live
+        - Saat kita menggunakan document.querySelectorAll(), NodeList tersebut bersifat Static
+
+        */
+
+      const menu1 = document.getElementById('menu1');
+      const list1 = menu1.childNodes;
+
+      // perubahan yang terjadi pada menu 1 akan berubah juga di list1 karena bersifat live
+      menu1.append(document.createElement('li'));
+      menu1.append(document.createElement('li'));
+
+      console.info(list1);
+    </script>
+  </body>
+</html>
