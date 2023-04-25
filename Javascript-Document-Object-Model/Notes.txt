@@ -37,3 +37,17 @@
 - Node memiliki banyak sekali method
 - Method di Node bisa digunakan untuk memanipulasi data Node di dalam Node tersebut, misal menambah/menghapus Node children
 - https://developer.mozilla.org/en-US/docs/Web/API/Node#properties 
+
+# ELEMENT
+- Element merupakan Node yang berbentuk element, biasanya adalah element HTML, misal <html>, <head>, <body>, <div>, <table>, dan lain-lain
+- https://developer.mozilla.org/en-US/docs/Web/API/Element 
+
+# ELEMENT PROPERTY
+- Element memiliki banyak sekali property
+- Dan karena Element adalah turunan dari Node, semua property Node pun bisa digunakan di Element
+- https://developer.mozilla.org/en-US/docs/Web/API/Element#properties 
+
+# ELEMENT METHOD
+- Element memiliki banyak sekali method
+- Dan karena Element adalah turunan dari Node, semua method Node pun bisa digunakan di Element
+- https://developer.mozilla.org/en-US/docs/Web/API/Element#methods 
