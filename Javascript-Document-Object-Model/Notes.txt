@@ -51,3 +51,9 @@
 - Element memiliki banyak sekali method
 - Dan karena Element adalah turunan dari Node, semua method Node pun bisa digunakan di Element
 - https://developer.mozilla.org/en-US/docs/Web/API/Element#methods 
+
+# MEMBUAT ELEMENT
+- Sebelumnya kita hanya mengambil element menggunakan id, artinya kita perlu buat dulu element nya di HTML
+- Kita juga bisa membuat object element baru, dan menambahkannya ke halaman web
+- Kita bisa menggunakan method createElement(tag) pada Document
+- https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement 
