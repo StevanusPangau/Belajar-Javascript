@@ -83,3 +83,8 @@
 - Kadang kebanyakan programmer ingin langsung mendapatkan value Attr 
 - Jarang sekali menggunakan object Attr nya
 - Untuk mendapatkan value secara langsung, kita bisa menggunakan method getAttribute(name) di Element
+
+# NAMED NODE MAP
+- NamedNodeMap merupakan kumpulan dari Attr
+- Mirip seperti NodeList, namun isinya adalah Attr
+- https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap 
