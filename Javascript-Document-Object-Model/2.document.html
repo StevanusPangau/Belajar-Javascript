@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Property</title>
+  </head>
+  <body>
+    <p id="tulisan">Ini Adalah Tulisan</p>
+    <script>
+      /*
+      # DOCUMENT OBJECT
+      Document secara otomatis dibuat dalam browser ketika membuka halaman web, sehingga kita tidak perlu membuat objek Document secara manual
+      Kita bisa langsung menggunakan kata kunci document
+      */
+
+      console.info(document);
+
+      /*
+      #DOCUMENT PROPERTY
+      Document memiliki banyak sekali property
+      Property dalam Document bisa kita gunakan untuk melihat semua data yang terdapat dalam document halaman web
+      https://developer.mozilla.org/en-US/docs/Web/API/Document#properties 
+      */
+      console.info(document.title);
+      console.info(document.head);
+      console.info(document.body);
+      console.info(document.images);
+      console.info(document.contentType);
+
+      /*
+      # DOCUMENT METHOD
+      Document memiliki banyak sekali method
+      Banyak method yang terdapat di document digunakan untuk memanipulasi data DOM, misal membuat Node, Element, Attribute atau mengambil dan menyeleksi Node di dalam document
+      https://developer.mozilla.org/en-US/docs/Web/API/Document#methods 
+      */
+
+      const tulisan = document.getElementById('tulisan');
+      console.info(tulisan);
+    </script>
+  </body>
+</html>
