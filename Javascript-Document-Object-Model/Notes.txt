@@ -98,3 +98,20 @@
 # MEMBUAT TEXT NODE
 - Kita juga bisa membuat Text Node menggunakan method document.createTextNode(string)
 - Hasilnya berupa Text yang bisa kita tambahkan ke Node lain
+
+# EVENT HANDLER
+- Node memiliki kemampuan bereaksi terhadap suatu kejadian, misal kejadian di klik, mouse di atas node tersebut, dan lain-lain
+- Ada banyak sekali jenis kejadian yang bisa kita buatkan aksinya ketika kejadian tersebut terjadi, atau dikenal dengan nama Event Handler
+- Ada dua cara kita menambahkan Event Handler ke Node, menggunakan Event Target atau Global Event Handler
+- https://developer.mozilla.org/en-US/docs/Web/API/EventTarget 
+- https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers 
+
+# EVENT TARGET
+- Event Target merupakan parent class dari Node, artinya semua Node memiliki kemampuan dari Event Target
+- Pada Event Target, kita bisa menggunakan method addEventListener(type, callback) untuk menambahkan Event Handler
+- https://developer.mozilla.org/en-US/docs/Web/API/EventTarget 
+
+# GLOBAL EVENT HANDLER
+- Selain menggunakan Event Target, untuk menambahkan Event Handler, kita juga bisa menggunakan Global Event Handler
+- Global Event Handler bukanlah sebuah super class, hanya kontrak yang bisa kita gunakan untuk menambah event handler sesuai dengan type event nya
+- https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers 
