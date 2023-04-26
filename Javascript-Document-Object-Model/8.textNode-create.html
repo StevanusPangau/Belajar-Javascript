@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Text Node</title>
+  </head>
+  <body>
+    <script>
+      /*
+        # MEMBUAT TEXT NODE
+        - Kita juga bisa membuat Text Node menggunakan method document.createTextNode(string)
+        - Hasilnya berupa Text yang bisa kita tambahkan ke Node lain
+        */
+
+      const text = document.createTextNode('Stevanus Evan Pangau');
+      document.body.appendChild(text);
+
+      const text2 = document.body.lastChild;
+      console.info(text2.wholeText);
+    </script>
+  </body>
+</html>
