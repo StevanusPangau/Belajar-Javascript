@@ -137,3 +137,17 @@
 - Saat kita mengubah sebuah style, penamaan style menjadi berubah
 - Pada style css, rata-rata menggunakan format lowercase dan -, misal background-color
 - Sedangkan pada DOM Style, menggunakan format pascalCase, misal backgroundColor
+
+# TEXT CONTENT DAN INNER TEXT
+- Selain textContent, terdapat property lain bernama innerText untuk mendapatkan isi text sebuah element
+- Tujuan nya sama, untuk mengambil atau mengubah isi text konten sebuah element, namun ada perbedaannya
+- textContent akan mengembalikan semua isi dari konten text sebuah element
+- innerText bisa tahu, bagian text mana yang ditampilkan, dan dia hanya akan mengambil text yang ditampilkan saja
+
+# INNER HTML
+- Jika Text Content dan Inner Text hanya mengambil text saja, Inner HTML akan mengambil seluruh element HTML nya sebagai text
+- Ini juga cocok jika kita ingin mengubah isi dari element menggunakan text yang berisi tag HTML
+
+# MENGUBAH ELEMENT DENGAN INNER HTML
+- Salah satu kemampuan dari innerHTML adalah, kita bisa mengubah isi dari children sebuah element hanya dengan string 
+- Tag yang terdapat di dalam String secara otomatis akan menjadi child element

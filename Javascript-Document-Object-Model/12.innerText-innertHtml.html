@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inner Text dan Inner HTML</title>
+  </head>
+  <body>
+    <p id="content">
+      <script>
+        console.info('Hello World');
+      </script>
+      <b>Stevanus</b> Evan <i>Pangau</i>
+    </p>
+
+    <script>
+      const content = document.getElementById('content');
+      console.info(content.textContent);
+      console.info(content.innerText);
+
+      // innert html akan mengambil semua tag html juga
+      console.info(content.innerHTML);
+
+      // mengubah isi dari element dengan inner html
+      content.innerHTML = '<h1>This is Title</h1><p>This is description</p>';
+    </script>
+  </body>
+</html>
