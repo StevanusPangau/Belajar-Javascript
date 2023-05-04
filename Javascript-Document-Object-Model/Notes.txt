@@ -158,3 +158,50 @@
 - Ada banyak sekali property, method  dan event yang bisa kita gunakan pada window
 - Untuk menggunakan Window, kita tidak perlu membuat objectnya, cukup gunakan kata kunci window
 - https://developer.mozilla.org/en-US/docs/Web/API/Window 
+
+# QUERY SELECTOR
+- Sebelumnya kita sudah menggunakan method querySelectorAll() pada Document, sekarang kita akan bahas lebih lengkap tentang Query Selector
+- Query Selector merupakan method untuk menseleksi node sesuai dengan pola yang kita ingin cari
+- Terdapat dua method untuk Query Selector :
+    - Document.querySelector(pola) digunakan menyeleksi node pertama yang sesuai dengan pola
+    - Document.querySelectorAll(pola) digunakan untuk menyeleksi semua node yang sesuai dengan pola
+
+# POLA QUERY SELECTOR
+- Pola untuk Query Selector adalah menggunakan CSS Selector
+- Penggunakan Pola nya mirip ketika kita membuat Selector di CSS
+- Jika belum tahu tentang CSS Selector, disarankan untuk dipelajari ulang tentang materi CSS
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors 
+
+# UNIVERSAL SELECTOR
+- Universal Selector merupakan selector untuk menyeleksi semua element
+- Kita bisa menggunakan karakter *
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors 
+
+# TYPE SELECTOR
+- Type Selector adalah selector yang digunakan untuk menyeleksi  tag type HTML yang kita pilih
+- Untuk menggunakannya, kita bisa langsung sebutkan nama tag nya
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors 
+
+# CLASS SELECTOR
+- Class Selector merupakan selector untuk menyeleksi semua element yang memiliki class yang sesuai selector
+- Untuk menggunakannya, kita bisa sebutkan nama class nya diawali dengan titik
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors 
+
+# ID SELECTOR
+- Class Selector merupakan selector untuk menyeleksi semua element yang memiliki class yang sesuai selector
+- Untuk menggunakannya, kita bisa sebutkan nama class nya diawali dengan titik
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors 
+
+# ATTRIBUTE SELECTOR
+- Attribute Selector merupakan selector yang bisa digunakan untuk menyeleksi element berdasarkan attribute nya
+- Kita bisa menggunakan selector [attribute]
+- Atau bisa juga untuk tag tertentu, misal menggunakan selector div[attribute]
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors 
+
+# OPERATOR DI ATTRIBUTE SELECTOR
+- Kita juga bisa menggunakan operator pada attribut selector
+- Misal [attribute=value], [attribute^=value] dan lain-lain
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax 
+
+# DAN SELECTOR LAINNYA
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors 

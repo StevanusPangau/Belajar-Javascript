@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Attribute Selector</title>
+  </head>
+  <body>
+    <div class="evan">Evan</div>
+    <div class="evanstevanus">Stevanus</div>
+    <div class="evanpangau">Pangau</div>
+    <script>
+      /*
+      # OPERATOR DI ATTRIBUTE SELECTOR
+      - Kita juga bisa menggunakan operator pada attribut selector
+      - Misal [attribute=value], [attribute^=value] dan lain-lain
+      - https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax 
+      */
+
+      // tanda ^ yaitu dimana awalannya contoh harus evan, jika pakai * brrti ngk peduli di awal atau di akhir jika ada kata evan akan tetap di ambil
+      const list = document.querySelectorAll("div[class^='evan']");
+      //const list = document.querySelectorAll("div[class='evan']");
+      console.info(list);
+    </script>
+  </body>
+</html>

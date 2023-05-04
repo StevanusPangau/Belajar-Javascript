@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Id Selector</title>
+  </head>
+  <body>
+    <ul>
+      <li class="menu-item">1</li>
+      <li id="menu2">2</li>
+      <li class="menu-item">3</li>
+    </ul>
+    <script>
+      /*
+      # ID SELECTOR
+      - Class Selector merupakan selector untuk menyeleksi semua element yang memiliki class yang sesuai selector
+      - Untuk menggunakannya, kita bisa sebutkan nama class nya diawali dengan titik
+      - https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors 
+      */
+
+      const menuItems = document.querySelectorAll('#menu2');
+      console.info(menuItems);
+    </script>
+  </body>
+</html>
