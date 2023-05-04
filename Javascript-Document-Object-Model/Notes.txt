@@ -205,3 +205,20 @@
 
 # DAN SELECTOR LAINNYA
 - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors 
+
+# NODE TYPE
+- Saat kita menyeleksi Node menjadi NodeList, kadang kita ingin tahu tipe Node tersebut
+- Apakah Element, TextElement atau yang lainnya
+- Node sendiri memiliki property bernama nodeType, dimana kita bisa melihat tipe dari node tersebut
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType 
+    - Tipe/value Node,
+        - 1 = Node.ELEMENT_NODE
+        - 2 = Node.ATTRIBUTE_NODE
+        - 3 = Node.TEXT_NODE
+        - 4 = Node.CDATA_SECTION_NODE
+        - 7 = Node.PROCESSING_INSTRUCTION_NODE
+        - 8 = Node.COMMENT_NODE
+        - 9 = Node.DOCUMENT_NODE
+        - 10 = Node.DOCUMENT_TYPE_NODE
+        - 11 = Node.DOCUMENT_FRAGMENT_NODE
+
