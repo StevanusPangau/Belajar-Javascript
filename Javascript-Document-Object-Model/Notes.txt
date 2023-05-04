@@ -240,3 +240,8 @@
 - Salah satu kelebihan Form adalah, kita bisa mengakses form hanya dengan menggunakan form name
 - Kita bisa gunakan document.forms[name]
 - Atau jika kita ingin mengakses input nya, kita juga bisa menggunakan name nya document.forms[name][inputName]
+
+# HTML TABLE ELEMENT
+- Salah satu HTML Element yang kompleks selain Form adalah Table
+- HTML Table Element juga memiliki banyak sekali property, method dan event yang khusus
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement 
