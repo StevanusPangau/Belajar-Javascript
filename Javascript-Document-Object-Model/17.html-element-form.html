@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Element Form</title>
+  </head>
+  <body>
+    <form name="commentForm">
+      <label for="comment"> Comment : <input type="text" id="comment" name="comment" /> </label>
+      <br />
+      <label for="from"> From : <input type="text" id="from" name="from" /> </label>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="commentList"></div>
+
+    <script>
+      document.querySelector('form[name=commentForm]').onsubmit = function (event) {
+        const commentList = document.getElementById('commentList');
+        const comment = document.getElementById('comment').value;
+        const from = document.getElementById('from').value;
+
+        const commentItem = document.createElement('p');
+        commentItem.textContent = `${comment} - ${from}`;
+        commentList.appendChild(commentItem);
+
+        document.querySelector('form[name=commentForm]').reset();
+
+        // event tersebut digunakan untuk membatalkan aksi yang semestinya yang aksi bawaan dari formnya, jadi yang mengakses formnya cukup dari javascript saja
+        event.preventDefault();
+      };
+    </script>
+  </body>
+</html>

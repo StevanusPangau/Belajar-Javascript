@@ -228,3 +228,15 @@
 - HTML Element memiliki banyak sekali property dan method tambahan selain dari Element DOM
 - Kebanyakan HTML Element memiliki property yang sesuai dengan attribute yang ada pada tag html tersebut, oleh karena itu, kadang kita tidak butuh lagi menggunakan method setAttribute dan getAttribute
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement 
+
+# HTML FORM ELEMENT
+- Form adalah salah satu element yang memiliki banyak sekali fitur diluar dari Element DOM
+- Hal ini karena penggunaan Form memang lebih kompleks dibandingkan element HTML lainnya
+- Ada banyak sekali property, method dan juga event yang terdapat pada HTML form element atau input element
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement 
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement 
+
+# AKSES FORM VIA NAME
+- Salah satu kelebihan Form adalah, kita bisa mengakses form hanya dengan menggunakan form name
+- Kita bisa gunakan document.forms[name]
+- Atau jika kita ingin mengakses input nya, kita juga bisa menggunakan name nya document.forms[name][inputName]
