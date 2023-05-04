@@ -245,3 +245,9 @@
 - Salah satu HTML Element yang kompleks selain Form adalah Table
 - HTML Table Element juga memiliki banyak sekali property, method dan event yang khusus
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement 
+
+# HTML ELEMENT LAINNYA
+- Sebenarnya masih banyak element-element HTML lainnya yang terdapat dalam Standard Web API
+- Namun akan terlalu banyak jika dibahas satu per-satu
+- Oleh karena itu saya sarankan teman-teman eksplore HTML element yang memang ingin dipelajari di halaman documentation resminya 
+- https://developer.mozilla.org/en-US/docs/Web/API#interfaces 
