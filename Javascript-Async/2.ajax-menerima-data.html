@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <h1 id="response"></h1>
+    <script>
+      const ajax = new XMLHttpRequest();
+      ajax.open('GET', 'api/hello.json');
+
+      // ajax.onload = callback // menggunakan onload
+      ajax.addEventListener('load', function () {
+        console.info(ajax.responseText);
+        const json = JSON.parse(ajax.responseText);
+
+        const response = document.getElementById('response');
+        //json.response di ambil karena key dari json di hello.json adalah response
+        response.textContent = json.response;
+        document.body.appendChild(response);
+      });
+
+      ajax.send();
+      // run dengan live server
+    </script>
+  </body>
+</html>
