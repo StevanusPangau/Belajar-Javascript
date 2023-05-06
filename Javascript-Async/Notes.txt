@@ -17,3 +17,10 @@
 - Ada banyak method Async yang terdapat di JavaScript, yang akan kita bahas kali ini adalah :
 - setTimeout(callback, timeInMilis), digunakan untuk menjalankan proses Async sekali dalam waktu tertentu.
 - setInterval(callback, timeInMilis), digunakan untuk menjalankan proses Async secara periodik dalam waktu tertentu.
+
+#2 APA ITU AJAX
+- AJAX singkatan dari Asynchronous JavaScript and XML
+- AJAX biasanya digunakan untuk mengambil atau mengirim data ke URL lain
+- Untuk membuat AJAX, kita bisa menggunakan class XMLHttpRequest
+- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest 
+
