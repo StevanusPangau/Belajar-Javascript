@@ -79,3 +79,8 @@
 - Pada kasus ini, kita bisa saja mengubah url nya dengan menambahkan Query Parameter, namun ada cara yang lebih mudah, yaitu menggunakan object URLSearchParam
 - Kita bisa memanfaatkan object URLSearchParam sebelum membuat URL
 - https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams 
+
+#8 FORM DATA DENGAN AJAX
+- Selain JSON dan Query Param, kadang kita juga mengirim Form Data dari Client ke Server menggunakan AJAX
+- Untuk kasus ini kita tetap bisa menggunakan URLSearchParam
+- Namun object URLSearchParam nya kita kirim di method send()
