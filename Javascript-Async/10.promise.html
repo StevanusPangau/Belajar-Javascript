@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      /*
+        #10 PROMISE STATE
+        - state = pending, fulfilled, rejected
+            - pending yaitu datanya masih belum ada atau masih belum jelas ada atau tidak, jadi dari pending bisa ke fulfilled atau rejected
+            - fulfilled yaitu data sudah ada
+            - rejected yaitu data tidak ditemukan atau error
+        - result = undefined, value, error
+
+        const promise = new Promise(function (resolve, reject) {
+          if (success) {
+            resolve(value);
+          } else {
+            reject(error);
+          }
+        });
+        */
+
+      // contoh Promise
+      const promise = new Promise(function (resolve, reject) {
+        const ajax = new XMLHttpRequest();
+        ajax.open('GET', 'api/product.json');
+        ajax.onload = function () {
+          if (ajax.status == 200) {
+            resolve(JSON.parse(ajax.responseText));
+          } else {
+            reject(`Error Get Product with response : ${ajax.responseText}`);
+          }
+        };
+        ajax.send();
+      });
+
+      // lihat data
+      console.info(promise);
+    </script>
+  </body>
+</html>

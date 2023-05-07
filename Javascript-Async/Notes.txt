@@ -92,3 +92,16 @@
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file 
 - https://developer.mozilla.org/en-US/docs/Web/API/File 
 - https://developer.mozilla.org/en-US/docs/Web/API/FileList 
+
+#10 APA ITU PROMISE
+- Promise merupakan proxy untuk sebuah nilai di masa depan (Future) yang belum diketahui saat pembuatan Promise tersebut.
+- Biasa Promise digunakan sebagai proxy untuk proses Async.
+- Penggunaan Promise sangat mudah, dan lebih mirip dengan kode Synchronous.
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise 
+
+#10 PROMISE STATE
+- state = pending, fulfilled, rejected
+    - pending yaitu datanya masih belum ada atau masih belum jelas ada atau tidak, jadi dari pending bisa ke fulfilled atau rejected
+    - fulfilled yaitu data sudah ada
+    - rejected yaitu data tidak ditemukan atau error
+- result = undefined, value, error
