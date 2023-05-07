@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <form>
+      <label for="username">Username : <input type="text" name="username" id="username" /></label>
+      <br />
+      <label for="password">Password : <input type="password" name="password" id="password" /></label>
+      <br />
+      <input type="button" value="Login" id="login" />
+    </form>
+    <h3 id="response"></h3>
+
+    <script>
+      // contoh fetch api request
+      function doLogin() {
+        const request = new Request('https://eoggrbhruakv0ny.m.pipedream.net', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
+          }),
+        });
+
+        //setelah request kita buat maka kita fetch, response tersebut berupa promise : Promise<Response>
+        const response = fetch(request);
+
+        console.info(response);
+        response
+          .then((response) => response.json())
+          .then(function (json) {
+            document.getElementById('response').textContent = json.success;
+          })
+          .catch(function (error) {
+            document.getElementById('response').textContent = error;
+            console.error(error);
+          });
+      }
+
+      document.getElementById('login').onclick = doLogin;
+    </script>
+  </body>
+</html>
