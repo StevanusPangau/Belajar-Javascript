@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Static Method</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Id :</td>
+        <td id="id"></td>
+      </tr>
+      <tr>
+        <td>Name :</td>
+        <td id="name"></td>
+      </tr>
+      <tr>
+        <td>Price :</td>
+        <td id="price"></td>
+      </tr>
+    </table>
+
+    <script>
+      // tambah param
+      function getProduct(product) {
+        return new Promise(function (resolve, reject) {
+          const ajax = new XMLHttpRequest();
+          ajax.open('GET', `api/${product}.json`);
+          ajax.onload = function () {
+            if (ajax.status == 200) {
+              resolve(ajax.responseText);
+            } else {
+              reject(`Error Get Product with response : ${ajax.status}`);
+            }
+          };
+          ajax.send();
+        });
+      }
+
+      // contoh jika kita ingin mengambil banyak data akan ribet jika satu"
+      /*
+      getProduct('product1').then();
+      getProduct('product2').then();
+      getProduct('product3').then();
+      */
+
+      // nah kita bisa menggunakan promise all
+      //const promise = Promise.all([getProduct('product1'), getProduct('product2'), getProduct('product3')]);
+
+      // ! pakai any jika ingin mengambil salah satu product yang paling cepat dapat
+      //const promise = Promise.any([getProduct('product1'), getProduct('product2'), getProduct('product3')]);
+
+      promise.then(function (products) {
+        // nanti valuenya akan jadi data array
+        console.info(products);
+      });
+    </script>
+  </body>
+</html>
