@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengirim File di AJAX</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form>
+      <label for="username">Username : <input type="text" name="username" id="username" /></label>
+      <br />
+      <label for="name">Name : <input type="text" name="name" id="name" /></label>
+      <br />
+      <label for="profile">Profile : <input type="file" name="profile" id="profile" /></label>
+      <br />
+      <!-- jika ingin select lebih dari satu tambah "multiple" -->
+      <input type="button" value="Register" id="register" />
+    </form>
+    <h3 id="response"></h3>
+    <script>
+      function doRegister() {
+        const ajax = new XMLHttpRequest();
+        ajax.open('POST', 'https://eoggrbhruakv0ny.m.pipedream.net');
+
+        ajax.onload = function () {
+          console.info(ajax.responseText);
+        };
+
+        // ! untuk headernya tidak perlu dibuat kan otomatis jadi multipart/form-data
+
+        // untuk file pakai form data
+        const form = new FormData();
+        form.append('username', document.getElementById('username').value);
+        form.append('name', document.getElementById('name').value);
+
+        // ambil file
+        const files = document.getElementById('profile').files;
+        const firstFile = files.item(0);
+        form.append('profile', firstFile);
+
+        ajax.send(form);
+      }
+
+      document.getElementById('register').onclick = doRegister;
+    </script>
+  </body>
+</html>
