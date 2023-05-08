@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <script>
+      // Promise<JSON Product>
+      function getProduct() {
+        const request = new Request('api/product.json', {
+          method: 'GET',
+        });
+
+        const response = fetch(request);
+
+        return response.then((response) => response.json());
+      }
+
+      getProduct().then((product) => console.info(product));
+
+      // contoh jika menggunakan promise
+      // Promise<String ProductName>
+      function getProductNamePromise() {
+        return new Promise(function (resolve, reject) {
+          getProduct()
+            .then((product) => resolve(product.name))
+            .catch((error) => reject(error));
+        });
+      }
+
+      getProductNamePromise().then((productName) => console.info(productName));
+
+      // jadi nanti await itu menunggu sampai data productnya ada ke dalam si product, lebih pendek ketika kita mengambil data daripada menggunakan promise
+      async function getProductNameAsync() {
+        // contoh error handling di async await, bisa langsung memakai try catch begitupun jika ditambah finnally
+        try {
+          const product = await getProduct();
+          return product.name;
+        } catch (e) {
+          return `Product Not Found, Error : ${e}`;
+        }
+      }
+
+      getProductNameAsync().then((productName) => console.info(`Async : ${productName}`));
+    </script>
+  </body>
+</html>

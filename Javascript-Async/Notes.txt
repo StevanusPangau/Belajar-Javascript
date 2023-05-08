@@ -139,3 +139,20 @@
 - Promise tersebut berisikan object Response
 - Ada banyak property dan method pada object Response, kita bisa menggunakannya sesuai dengan yang kita butuhkan
 - https://developer.mozilla.org/en-US/docs/Web/API/Response 
+
+#13 ASYNC AWAIT
+- Async Await adalah fitur di JavaScript yang digunakan untuk mempermudah proses pembuatan kode Promise.
+- Dengan menggunakan Async Await, kita bisa membuat kode Asynchronous dengan gaya Synchronous
+
+#13 ASYNC
+- Async digunakan untuk menandakan bahwa Function tersebut adalah Async, dan mengembalikan Promise
+- Dengan menggunakan Async, kita tidak perlu membuat Promise secara manual lagi
+
+#13 AWAIT
+- Await digunakan untuk mendapatkan value hasil dari Promise
+- Await hanya bisa digunakan dalam Async Function
+
+#13 ERROR HANDLER DI ASYNC AWAIT
+- Saat kita menggunakan Promise, kita bisa menggunakan catch() ketika terjadi error
+- Bagaimana pada kasus Async Await?
+- Pada Async Await, kita bisa menggunakan try catch untuk melakukan penanganan error
